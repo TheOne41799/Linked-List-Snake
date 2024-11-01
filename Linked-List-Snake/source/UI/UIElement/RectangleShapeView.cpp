@@ -58,6 +58,5 @@ namespace UI
 		{
 			rectangle_shape.setOutlineThickness(outline_thickness);
 		}
-
 	}
 }
