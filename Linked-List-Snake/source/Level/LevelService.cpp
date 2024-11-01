@@ -40,9 +40,15 @@ namespace Level
 		level_controller->render();
 	}
 
+	void LevelService::spawnPlayer()
+	{
+		ServiceLocator::getInstance()->getPlayerService()->spawnPlayer();
+	}
+
 	void LevelService::createLevel(LevelNumber level_to_load)
 	{
 		current_level = level_to_load;
+		spawnPlayer();
 	}
 
 	void LevelService::destroy()
