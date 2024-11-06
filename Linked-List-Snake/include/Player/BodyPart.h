@@ -20,6 +20,7 @@ namespace Player
 		void createBodyPartImage();
 		void initializeBodyPartImage();
 		sf::Vector2f getBodyPartScreenPosition();
+		float getRotationAngle();
 
 		void destroy();
 
