@@ -132,5 +132,8 @@ namespace Player
 		return current_snake_state;
 	}
 
-	void SnakeController::destroy() { }
+	void SnakeController::destroy() 
+	{ 
+		delete (single_linked_list);
+	}
 }
