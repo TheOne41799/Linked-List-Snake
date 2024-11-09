@@ -12,6 +12,12 @@ namespace Player
 		DEAD,
 	};
 
+	enum class InputState
+	{
+		WAITING,
+		PROCESSING
+	};
+
 
 	class SnakeController
 	{
@@ -25,6 +31,8 @@ namespace Player
 
 		SnakeState current_snake_state;
 		Direction current_snake_direction;
+
+		InputState current_input_state;
 
 		float elapsed_duration;
 		float restart_counter;
