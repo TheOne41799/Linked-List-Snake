@@ -28,5 +28,7 @@ namespace LinkedList
 		//void createHeadNode();
 
 		void insertNodeAtTail();
+		void updateNodePosition();
+		void updateNodeDirection(Direction direction_to_set);
 	};
 }
