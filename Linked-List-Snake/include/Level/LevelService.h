@@ -1,6 +1,7 @@
 #pragma once
 #include "LevelNumber.h"
 
+
 namespace Level
 {
     class LevelController;
@@ -13,6 +14,7 @@ namespace Level
 
         void createLevelController();
         void spawnPlayer();
+        void spawnLevelElements(LevelNumber level_to_load);
         void destroy();
 
     public:
