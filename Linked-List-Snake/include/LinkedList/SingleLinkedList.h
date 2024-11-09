@@ -15,7 +15,7 @@ namespace LinkedList
 		sf::Vector2i default_position;
 		Direction default_direction;
 
-		Node* createNode();
+		Node* createNode();		
 
 	public:
 		SingleLinkedList();
@@ -23,5 +23,7 @@ namespace LinkedList
 
 		void initialize(float width, float height, sf::Vector2i position, Direction direction);
 		void render();
+
+		void createHeadNode();
 	};
 }
