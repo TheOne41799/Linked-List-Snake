@@ -93,6 +93,25 @@ namespace LinkedList
 		new_node->body_part.initialize(node_width, node_height, getNewNodePosition(cur_node), cur_node->body_part.getDirection());
 	}
 
+	void SingleLinkedList::removeNodeAtHead()
+	{
+		Node* cur_node = head_node;
+		head_node = head_node->next;
+
+		cur_node->next = nullptr;
+		delete (cur_node);
+	}
+
+	void SingleLinkedList::removeAllNodes()
+	{
+		if (head_node == nullptr) return;
+
+		while (head_node != nullptr)
+		{
+			removeNodeAtHead();
+		}
+	}
+
 	Node* SingleLinkedList::createNode()
 	{
 		return new Node();
