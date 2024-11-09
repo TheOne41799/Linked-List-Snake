@@ -188,7 +188,10 @@
     <ClInclude Include="include\Player\BodyPart.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="include\Player\Node.h">
+    <ClInclude Include="include\LinkedList\Node.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\LinkedList\SingleLinkedList.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
