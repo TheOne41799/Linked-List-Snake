@@ -4,9 +4,9 @@ namespace Player
 {
 	enum class Direction
 	{
+		RIGHT,
 		UP,
 		DOWN,
-		LEFT,
-		RIGHT,
+		LEFT
 	};
 }
