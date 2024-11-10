@@ -117,7 +117,7 @@ namespace LinkedList
 		return new Node();
 	}
 
-	sf::Vector2i SingleLinkedList::getNewNodePosition(Node* reference_node)
+	/*sf::Vector2i SingleLinkedList::getNewNodePosition(Node* reference_node)
 	{
 		Direction reference_direction = reference_node->body_part.getDirection();
 		sf::Vector2i reference_position = reference_node->body_part.getPosition();
@@ -139,7 +139,7 @@ namespace LinkedList
 		}
 
 		return default_position;
-	}
+	}*/
 
 	Node* SingleLinkedList::getHeadNode()
 	{

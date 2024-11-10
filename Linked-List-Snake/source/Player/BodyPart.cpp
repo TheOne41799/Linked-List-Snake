@@ -81,25 +81,22 @@ namespace Player
 		}
 	}
 
-	/*sf::Vector2i BodyPart::getNextPositionDown()
+	sf::Vector2i BodyPart::getPrevPosition()
 	{
-		return sf::Vector2i(grid_position.x, grid_position.y + 1);
+		switch (direction)
+		{
+		case Direction::UP:
+			return getNextPositionDown();
+		case Direction::DOWN:
+			return getNextPositionUp();
+		case Direction::RIGHT:
+			return getNextPositionLeft();
+		case Direction::LEFT:
+			return getNextPositionRight();
+		default:
+			return grid_position;
+		}
 	}
-
-	sf::Vector2i BodyPart::getNextPositionUp()
-	{
-		return sf::Vector2i(grid_position.x, grid_position.y - 1);
-	}
-
-	sf::Vector2i BodyPart::getNextPositionRight()
-	{
-		return sf::Vector2i(grid_position.x + 1, grid_position.y);
-	}
-
-	sf::Vector2i BodyPart::getNextPositionLeft()
-	{
-		return sf::Vector2i(grid_position.x - 1, grid_position.y);
-	}*/
 
 	sf::Vector2i BodyPart::getNextPositionDown()
 	{
