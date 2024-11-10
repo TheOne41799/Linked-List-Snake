@@ -73,6 +73,21 @@ namespace LinkedList
 		return false;
 	}
 
+	int SingleLinkedList::findMiddleNode()
+	{
+		Node* slow = head_node;
+		Node* fast = head_node;
+		int midIndex = 0;
+
+		while (fast != nullptr && fast->next != nullptr) {
+			slow = slow->next;
+			fast = fast->next->next;
+			midIndex++;
+		}
+
+		return midIndex;
+	}
+
 	void SingleLinkedList::insertNodeAtTail()
 	{
 		linked_list_size++;
@@ -141,7 +156,6 @@ namespace LinkedList
 		linked_list_size++;
 
 		shiftNodesAfterInsertion(new_node, cur_node, prev_node);
-
 	}
 
 	void SingleLinkedList::shiftNodesAfterInsertion(Node* new_node, Node* cur_node, Node* prev_node)
@@ -184,31 +198,7 @@ namespace LinkedList
 	Node* SingleLinkedList::createNode()
 	{
 		return new Node();
-	}
-
-	/*sf::Vector2i SingleLinkedList::getNewNodePosition(Node* reference_node)
-	{
-		Direction reference_direction = reference_node->body_part.getDirection();
-		sf::Vector2i reference_position = reference_node->body_part.getPosition();
-
-		switch (reference_direction)
-		{
-		case Direction::UP:
-			return sf::Vector2i(reference_position.x, reference_position.y - 1);
-			break;
-		case Direction::DOWN:
-			return sf::Vector2i(reference_position.x, reference_position.y + 1);
-			break;
-		case Direction::LEFT:
-			return sf::Vector2i(reference_position.x + 1, reference_position.y);
-			break;
-		case Direction::RIGHT:
-			return sf::Vector2i(reference_position.x - 1, reference_position.y);
-			break;
-		}
-
-		return default_position;
-	}*/
+	}	
 
 	void SingleLinkedList::initializeNode(Node* new_node, Node* reference_node, Operation operation)
 	{
