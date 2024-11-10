@@ -5,6 +5,9 @@
 namespace Player
 {
 	class SnakeController;
+	enum class TimeComplexity;
+	enum class LinkedListOperations;
+
 
 	class PlayerService
 	{
@@ -24,5 +27,10 @@ namespace Player
 
 		void spawnPlayer();
 		std::vector<sf::Vector2i> getCurrentSnakePositionList();
+
+		int getPlayerScore();
+
+		TimeComplexity getTimeComplexity();
+		LinkedListOperations getLastOperation();
 	};
 }
