@@ -127,6 +127,18 @@ namespace LinkedList
 		head_node = new_node;
 	}
 
+	void SingleLinkedList::insertNodeAtMiddle()
+	{
+		if (head_node == nullptr) 
+		{
+			insertNodeAtHead();
+			return;
+		}
+
+		int midIndex = findMiddleNode();
+		insertNodeAtIndex(midIndex);           
+	}
+
 	void SingleLinkedList::insertNodeAtIndex(int index)
 	{
 		if (index < 0 || index >= linked_list_size) return;
@@ -183,6 +195,7 @@ namespace LinkedList
 
 		cur_node->next = nullptr;
 		delete (cur_node);
+		linked_list_size--;
 	}
 
 	void SingleLinkedList::removeAllNodes()
