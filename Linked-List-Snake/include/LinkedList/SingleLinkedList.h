@@ -28,6 +28,7 @@ namespace LinkedList
 		Node* createNode();
 		void initializeNode(Node* new_node, Node* reference_node, Operation operation);
 		sf::Vector2i getNewNodePosition(Node* reference_node, Operation operation);
+		Direction getReverseDirection(Direction reference_direction);
 
 		int findMiddleNode();
 
@@ -55,6 +56,8 @@ namespace LinkedList
 		void shiftNodesAfterRemoval(Node* cur_node);
 
 		Node* findNodeAtIndex(int index);
+		Direction reverse();
+		void reverseNodeDirections();
 
 		void updateNodePosition();
 		void updateNodeDirection(Direction direction_to_set);
