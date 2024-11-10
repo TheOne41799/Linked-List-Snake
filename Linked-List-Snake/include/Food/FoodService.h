@@ -9,9 +9,22 @@ namespace Food
 	enum class FoodType;
 	class FoodItem;
 
+
+	enum FoodSpawningStatus
+	{
+		ACTIVE,
+		IN_ACTIVE,
+	};
+
+
 	class FoodService
 	{
 	private:
+		const float spawn_duration = 4.f;
+
+		float elapsed_duration;
+
+		FoodSpawningStatus current_spawning_status;
 
 		FoodItem* current_food_item;
 
@@ -33,6 +46,9 @@ namespace Food
 		void destroyFood();
 		void reset();
 
+		void updateElapsedDuration();
+		void handleFoodSpawning();
+
 	public:
 		FoodService();
 		~FoodService();
@@ -42,5 +58,6 @@ namespace Food
 		void render();
 
 		void startFoodSpawning();
+		void stopFoodSpawning();
 	};
 }
