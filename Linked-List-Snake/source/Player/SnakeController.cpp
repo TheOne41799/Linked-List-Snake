@@ -113,14 +113,6 @@ namespace Player
 		single_linked_list->updateNodePosition();
 	}
 
-	/*void SnakeController::processSnakeCollision() 
-	{ 
-		if (single_linked_list->processNodeCollision())
-		{
-			current_snake_state = SnakeState::DEAD;
-		}
-	}*/
-
 	void SnakeController::processSnakeCollision()
 	{
 		processBodyCollision();
@@ -167,35 +159,35 @@ namespace Player
 		switch (food_type)
 		{
 		case FoodType::PIZZA:
-			//Insert At Tail
+			single_linked_list->insertNodeAtTail();
 			break;
 
 		case FoodType::BURGER:
-			//Insert At Head
+			single_linked_list->insertNodeAtHead();
 			break;
 
 		case FoodType::CHEESE:
-			//Insert in Middle
+			single_linked_list->insertNodeAtMiddle();
 			break;
 
 		case FoodType::APPLE:
-			//Delete at Head
+			single_linked_list->removeNodeAtHead();
 			break;
 
 		case FoodType::MANGO:
-			//Delete at Middle
+			single_linked_list->removeNodeAtMiddle();
 			break;
 
 		case FoodType::ORANGE:
-			//Delete at Tail
+			single_linked_list->removeNodeAtTail();
 			break;
 
 		case FoodType::POISION:
-			//Delete half the snake
+			single_linked_list->removeHalfNodes();
 			break;
 
 		case FoodType::ALCOHOL:
-			//Reverse the snake
+			current_snake_direction = single_linked_list->reverse();
 			break;
 		}
 	}
