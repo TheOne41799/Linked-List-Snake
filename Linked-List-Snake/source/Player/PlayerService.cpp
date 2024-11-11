@@ -50,4 +50,34 @@ namespace Player
 	{
 		delete (snake_controller);
 	}
+
+	int PlayerService::getPlayerScore()
+	{
+		return snake_controller->getPlayerScore();
+	}
+
+	TimeComplexity PlayerService::getTimeComplexity()
+	{
+		return snake_controller->getTimeComplexity();
+	}
+
+	LinkedListOperations PlayerService::getLastOperation()
+	{
+		return snake_controller->getLastOperation();
+	}
+
+	/*int PlayerService::getSnakeSize()
+	{
+		return snake_controller->getSnakeSize();
+	}
+
+	SnakeState PlayerService::getSnakeState()
+	{
+		return snake_controller->getSnakeState();
+	}
+
+	bool PlayerService::isSnakeSizeMinimum()
+	{
+		return snake_controller->isSnakeSizeMinimum();
+	}*/
 }
