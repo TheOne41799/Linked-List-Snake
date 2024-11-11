@@ -115,5 +115,6 @@ namespace Player
 
 		//int getSnakeSize();
 		bool isSnakeSizeMinimum();
+		bool isSnakeDead();
 	};
 }

@@ -89,4 +89,9 @@ namespace Player
 	{
 		return snake_controller->isSnakeSizeMinimum();
 	}*/
+
+	bool PlayerService::isPlayerDead()
+	{
+		return snake_controller->isSnakeDead();
+	}
 }

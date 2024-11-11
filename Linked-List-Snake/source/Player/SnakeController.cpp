@@ -335,4 +335,9 @@ namespace Player
 			return true;
 		return false;
 	}
+
+	bool SnakeController::isSnakeDead()
+	{
+		return current_snake_state == SnakeState::DEAD;
+	}
 }

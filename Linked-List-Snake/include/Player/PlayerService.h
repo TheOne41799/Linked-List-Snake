@@ -40,5 +40,7 @@ namespace Player
 		//int getSnakeSize();
 		//bool isSnakeSizeMinimum();
 		//SnakeState getSnakeState();
+
+		bool isPlayerDead();
 	};
 }
