@@ -16,7 +16,6 @@ namespace LinkedListLib
 			SingleLinkedList();
 			~SingleLinkedList();
 
-
 			void insertNodeAtTail() override;
 			void insertNodeAtHead() override;
 			void insertNodeAtMiddle() override;
