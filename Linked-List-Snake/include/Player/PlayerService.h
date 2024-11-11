@@ -7,6 +7,7 @@ namespace Player
 	class SnakeController;
 	enum class TimeComplexity;
 	enum class LinkedListOperations;
+	enum class SnakeState;
 
 
 	class PlayerService
@@ -32,5 +33,9 @@ namespace Player
 
 		TimeComplexity getTimeComplexity();
 		LinkedListOperations getLastOperation();
+
+		//int getSnakeSize();
+		//bool isSnakeSizeMinimum();
+		//SnakeState getSnakeState();
 	};
 }

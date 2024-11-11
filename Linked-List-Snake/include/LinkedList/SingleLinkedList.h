@@ -64,6 +64,7 @@ namespace LinkedList
 
 		bool processNodeCollision();
 		Node* getHeadNode();
+		int getLinkedListSize();
 
 		std::vector<sf::Vector2i> getNodesPositionList();
 	};

@@ -21,9 +21,7 @@ namespace LinkedList
 	}
 
 	void SingleLinkedList::render() 
-	{ 
-		//head_node->body_part.render();
-
+	{
 		Node* cur_node = head_node;
 
 		while (cur_node != nullptr) 
@@ -411,6 +409,11 @@ namespace LinkedList
 	Node* SingleLinkedList::getHeadNode()
 	{
 		return head_node;
+	}
+
+	int SingleLinkedList::getLinkedListSize()
+	{
+		return linked_list_size;
 	}
 
 	std::vector<sf::Vector2i> SingleLinkedList::getNodesPositionList()

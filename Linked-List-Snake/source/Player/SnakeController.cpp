@@ -179,24 +179,32 @@ namespace Player
 			break;
 
 		case FoodType::APPLE:
+			if (isSnakeSizeMinimum()) return;
+
 			single_linked_list->removeNodeAtHead();
 			time_complexity = TimeComplexity::ONE;
 			last_linked_list_operation = LinkedListOperations::REMOVE_AT_HEAD;
 			break;
 
 		case FoodType::MANGO:
+			if (isSnakeSizeMinimum()) return;
+
 			single_linked_list->removeNodeAtMiddle();
 			time_complexity = TimeComplexity::N;
 			last_linked_list_operation = LinkedListOperations::REMOVE_AT_MID;
 			break;
 
 		case FoodType::ORANGE:
+			if (isSnakeSizeMinimum()) return;
+
 			single_linked_list->removeNodeAtTail();
 			time_complexity = TimeComplexity::N;
 			last_linked_list_operation = LinkedListOperations::REMOVE_AT_TAIL;
 			break;
 
 		case FoodType::POISION:
+			if (isSnakeSizeMinimum()) return;
+
 			single_linked_list->removeHalfNodes();
 			time_complexity = TimeComplexity::N;
 			last_linked_list_operation = LinkedListOperations::DELETE_HALF_LIST;
@@ -236,6 +244,8 @@ namespace Player
 		restart_counter = 0.f;
 		player_score = 0;
 		current_input_state = InputState::WAITING;
+		time_complexity = TimeComplexity::NONE;
+		last_linked_list_operation = LinkedListOperations::NONE;
 	}
 
 	void SnakeController::respawnSnake() 
@@ -278,5 +288,22 @@ namespace Player
 	LinkedListOperations SnakeController::getLastOperation()
 	{
 		return last_linked_list_operation;
+	}
+
+	/*int SnakeController::getSnakeSize()
+	{
+		return single_linked_list->getLinkedListSize();
+	}
+
+	int SnakeController::getRandomBodyPartIndex()
+	{
+		return std::rand() % (single_linked_list->getLinkedListSize() - 1);
+	}*/
+
+	bool SnakeController::isSnakeSizeMinimum()
+	{
+		if (single_linked_list->getLinkedListSize() <= minimum_snake_size)
+			return true;
+		return false;
 	}
 }

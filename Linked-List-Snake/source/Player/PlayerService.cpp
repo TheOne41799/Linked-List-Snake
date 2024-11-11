@@ -65,4 +65,19 @@ namespace Player
 	{
 		return snake_controller->getLastOperation();
 	}
+
+	/*int PlayerService::getSnakeSize()
+	{
+		return snake_controller->getSnakeSize();
+	}
+
+	SnakeState PlayerService::getSnakeState()
+	{
+		return snake_controller->getSnakeState();
+	}
+
+	bool PlayerService::isSnakeSizeMinimum()
+	{
+		return snake_controller->isSnakeSizeMinimum();
+	}*/
 }
