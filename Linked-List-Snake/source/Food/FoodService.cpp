@@ -63,7 +63,7 @@ namespace Food
 		reset();
 	}
 
-	bool FoodService::processFoodCollision(LinkedList::Node* head_node, FoodType& out_food_type)
+	bool FoodService::processFoodCollision(LinkedListLib::Node* head_node, FoodType& out_food_type)
 	{
 		if (current_food_item && current_food_item->getFoodPosition() == head_node->body_part.getPosition())
 		{
@@ -139,6 +139,8 @@ namespace Food
 
 	void FoodService::handleFoodSpawning()
 	{
+		if (ServiceLocator::getInstance()->getPlayerService()->isPlayerDead()) return;
+
 		if (elapsed_duration >= spawn_duration)
 		{
 			destroyFood();
