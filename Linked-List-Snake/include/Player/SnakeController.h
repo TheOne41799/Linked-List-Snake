@@ -1,8 +1,10 @@
 #pragma once
 #include <SFML/System/Vector2.hpp>
+#include "LinkedListLib/Node.h"
+#include "LinkedListLib/LinkedList.h"
 #include "../../include/Player/Direction.h"
-#include "../../include/LinkedList/SingleLinkedList.h"
 #include "Food/FoodType.h"
+#include "Level/LevelConfig.h"
 
 
 namespace Player
@@ -65,9 +67,13 @@ namespace Player
 		TimeComplexity time_complexity;
 		LinkedListOperations last_linked_list_operation;
 
-		LinkedList::SingleLinkedList* single_linked_list;
+		//LinkedList::SingleLinkedList* single_linked_list;
+		LinkedListLib::LinkedList* linked_list;
 
-		void createLinkedList();
+		//void createLinkedList();
+
+		void initializeLinkedList();
+
 		void processPlayerInput();
 		void updateSnakeDirection();
 		void delayedUpdate();
@@ -92,6 +98,8 @@ namespace Player
 		void initialize();
 		void update();
 		void render();
+
+		void createLinkedList(Level::LinkedListType level_type);
 
 		void spawnSnake();
 		void respawnSnake();
