@@ -176,7 +176,7 @@
     <ClInclude Include="include\Food\FoodItem.h" />
     <ClInclude Include="include\Food\FoodService.h" />
     <ClInclude Include="include\Food\FoodType.h" />
-    <ClInclude Include="include\Level\LevelNumber.h" />
+    <ClInclude Include="include\Level\LevelConfig.h" />
     <ClInclude Include="include\Level\LevelController.h" />
     <ClInclude Include="include\Level\LevelData.h" />
     <ClInclude Include="include\Level\LevelModel.h" />
