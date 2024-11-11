@@ -263,5 +263,27 @@ namespace LinkedListLib
                 previous_node_direction = temp_node_direction;
             }
         }
+
+        Direction DoubleLinkedList::reverse()
+        {
+            Node* cur_node = head_node;
+            Node* prev_node = nullptr;
+            Node* next_node = nullptr;
+
+            while (cur_node != nullptr)
+            {
+                next_node = cur_node->next;
+                cur_node->next = prev_node;
+                static_cast<DoubleNode*>(cur_node)->previous = next_node;
+
+                prev_node = cur_node;
+                cur_node = next_node;
+            }
+
+            head_node = prev_node;
+
+            reverseNodeDirections();
+            return head_node->body_part.getDirection();
+        }
     }
 }
